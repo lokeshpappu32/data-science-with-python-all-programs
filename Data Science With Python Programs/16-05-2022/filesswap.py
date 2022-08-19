@@ -1,0 +1,27 @@
+#created files
+file1=open("f1.txt","w")
+file1.write("abc")
+file2=open("f2.txt","w")
+file2.write("123")
+file1.close()
+file2.close()
+
+#file swapping
+
+file1=open("f1.txt","r")
+txt=file1.read()
+file1.close()
+file1=open("f1.txt","w")
+file2=open("f2.txt","r")
+file1.write(file2.read())
+file1.close()
+file2.close()
+file2=open("f2.txt","w")
+file2.write(txt)
+file2.close()
+file1=open("f1.txt","r")
+print(file1.read())
+file2=open("f2.txt","r")
+print(file2.read())
+file1.close()
+file2.close()
